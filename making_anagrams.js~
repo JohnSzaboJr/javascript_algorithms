@@ -1,0 +1,20 @@
+
+
+function main() {
+    var a = readLine();
+    var b = readLine();
+    var c = a.length <= b.length ? a : b;
+    var d = a.length <= b.length ? b : a;
+    var i = 0;
+    while (i < c.length)
+        {
+            if (d.includes(c[i]))
+                {
+                    d = d.replace(c[i], '');
+                    c = c.replace(c[i], '');
+                    i--;
+                }
+            i++;
+        }
+    console.log(c.length + d.length);
+}
